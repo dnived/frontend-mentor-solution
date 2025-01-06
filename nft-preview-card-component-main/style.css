@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root{
+--softBlue: hsl(215, 51%, 70%);
+--Cyan: hsl(178, 100%, 50%);
+--main-BG: hsl(217, 54%, 11%);
+--card-BG: hsl(216, 50%, 16%);
+--line: hsl(215, 32%, 27%);
+--White: hsl(0, 0%, 100%);
+
+}
+
+
+body{
+    margin: 0;
+    background-color: #0D1A2D;
+    height: 100vh;
+    /* width: 110vw; */
+    font-family: "Outfit", system-ui;
+    font-size: 18px;
+    box-sizing: border-box;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+img{
+    width: 100%;
+}
+
+.container1{
+   
+}
+
+.container2{
+    
+}
+
+.cardMainContainer{
+    width: 305px;
+    /* height: 550px; */
+    padding: 23px;
+    background-color: var(--card-BG);
+    border-radius:10px;
+    position: relative;
+}
+
+.cardMainContainer img{
+    border-radius: 10px;
+}
+
+
+
+
+.imghover{
+    width: 305px;
+    height: 300px;
+   position:absolute;
+   inset: 26px 23px;
+   border-radius: 10px;
+visibility: hidden;
+}
+
+
+
+.imghover img{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+   margin:0;
+   transform: translate(50%, -50%);
+    width: 15%;
+}
+
+.imghover:hover{
+   visibility: visible;
+    background-color: hsl(178, 100%, 50%, 65%);
+}
+
+.name{
+    color: var(--White);
+    font-size: 1.3rem;
+    font-weight: 600;
+    
+}
+
+.name:hover{
+    color: var(--Cyan);
+}
+
+.description{
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 200;
+    color: hsla(0, 0%, 100%, 0.55);
+}
+
+
+.priceDaysContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+}
+
+.priceContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    
+}
+
+.priceContainer img{
+    width: 15%;
+    margin-right: 0.5rem;
+}
+
+.priceContainer p {
+    font-size: 1rem;
+    margin: 0;
+    margin: 1.5rem 0;
+}
+
+.priceContainer:nth-child(1) p{
+    color: var(--Cyan);
+}
+
+.priceContainer:nth-child(2) p{
+    
+    color: hsl(0, 0%, 100%, 70%);
+}
+
+.creationDetailContainer{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+.creationDetailContainer img{
+    width: 2rem;
+    margin-right: 1.2rem;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+}
+
+
+.creationDetailContainer p{
+    font-size: 1rem;
+    color: hsl(0, 0%, 100%, 70%);
+}
+
+.creationDetailContainer > p > span {
+    color: var(--White);
+}
+
+
+.creationDetailContainer > p > span:hover {
+    color: var(--Cyan);
+}
+
+
+
