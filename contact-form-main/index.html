@@ -11,6 +11,12 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Frontend Mentor | Contact form</title>
 
@@ -34,10 +40,12 @@
           <div class="input-and-label-container">
             <label for="firstname"> First Name </label>
             <input type="text" name="firstname" />
+            <p class="error-message">Error</p>
           </div>
           <div class="input-and-label-container">
             <label for="lastname"> Last Name </label>
             <input type="text" name="lastname" />
+            <p class="error-message">Error</p>
           </div>
         </div>
 
@@ -46,18 +54,25 @@
           <div class="input-and-label-container">
             <label for="email"> Email Address </label>
             <input type="text" name="email" />
+            <p class="error-message">Error</p>
           </div>
         </div>
 
         <!-- QueryType -->
         <div class="radio-option-container">
-          <div class="query-option-container">
-            <input type="radio" />
-            <label> General Query </label>
-          </div>
-          <div class="query-option-container">
-            <input type="radio" />
-            <label> Support Request </label>
+          <label> Query Type</label>
+          <div class="query-options">
+            <div class="query-option-container">
+              <input type="radio" />
+              <label> General Query </label>
+              <p class="error-message">Error</p>
+            </div>
+
+            <div class="query-option-container">
+              <input type="radio" />
+              <label> Support Request </label>
+              <p class="error-message">Error</p>
+            </div>
           </div>
         </div>
 
@@ -65,12 +80,14 @@
         <div class="message-input-field-container">
           <label> Message </label>
           <input type="text" />
+          <p class="error-message">Error</p>
         </div>
 
         <!-- checkbox -->
         <div class="checkbox-container">
           <input type="checkbox" />
           <label> I consent to being contacted by the team. </label>
+          <p class="error-message">Error</p>
         </div>
 
         <!-- button -->
