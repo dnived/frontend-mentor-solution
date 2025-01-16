@@ -39,13 +39,13 @@
         <div class="name-input-field-container">
           <div class="input-and-label-container">
             <label for="firstname"> First Name </label>
-            <input type="text" name="firstname" />
-            <p class="error-message">Error</p>
+            <input type="text" name="firstname" minlength="3" />
+            <p class="error-message">This field is required</p>
           </div>
           <div class="input-and-label-container">
             <label for="lastname"> Last Name </label>
-            <input type="text" name="lastname" />
-            <p class="error-message">Error</p>
+            <input type="text" name="lastname" minlength="3" />
+            <p class="error-message">This field is required</p>
           </div>
         </div>
 
@@ -54,7 +54,7 @@
           <div class="input-and-label-container">
             <label for="email"> Email Address </label>
             <input type="text" name="email" />
-            <p class="error-message">Error</p>
+            <p class="error-message">Please enter a valid email address</p>
           </div>
         </div>
 
@@ -79,15 +79,19 @@
         <!-- Message Box -->
         <div class="message-input-field-container">
           <label> Message </label>
-          <textarea rows="6"></textarea>
-          <p class="error-message">Error</p>
+          <textarea rows="6" minlength="2"></textarea>
+          <p class="error-message">This field is required</p>
         </div>
 
         <!-- checkbox -->
         <div class="checkbox-container">
-          <input type="checkbox" />
-          <label> I consent to being contacted by the team. </label>
-          <p class="error-message">Error</p>
+          <div class="checkbox">
+            <input type="checkbox" />
+            <label> I consent to being contacted by the team. </label>
+          </div>
+          <p class="error-message">
+            To submit this form, please consent to being contacted
+          </p>
         </div>
 
         <!-- button -->

@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Karla", serif;
 }
 
 body {
@@ -36,6 +37,11 @@ form {
   display: none;
 }
 
+input:invalid .error-message {
+  font-size: 0.8rem;
+  color: hsl(0, 66%, 54%);
+}
+
 .name-input-field-container {
   display: flex;
   flex-direction: row;
@@ -62,15 +68,26 @@ input {
   margin-block: 8px;
 }
 
+input:focus-visible,
+input:focus-within,
+input:focus,
+input:hover {
+  border: 1px solid hsl(169, 82%, 27%);
+}
+
 label {
   font-size: 0.9rem;
   font-weight: 500;
   color: #5a5959;
 }
 
+input:invalid {
+  border: 1px solid hsl(0, 66%, 54%);
+}
+
 label::after {
   content: "*";
-  color: #858585;
+  color: hsl(169, 82%, 27%);
 }
 
 .query-options {
@@ -112,6 +129,14 @@ label::after {
   content: "";
 }
 
+.query-option-container > input:focus,
+.query-option-container > input:focus-visible,
+.query-option-container > input:focus-within {
+  background-color: #aaaaaa;
+  color: hsl(169, 82%, 27%);
+  border: 1px solid h;
+}
+
 .message-input-field-container {
   display: flex;
   flex-direction: column;
@@ -119,18 +144,35 @@ label::after {
 }
 
 .message-input-field-container > textarea {
-  margin-top: 8px;
+  margin-block: 8px;
   resize: none;
-
   border-radius: 8px;
+  border: none;
+  outline: none;
+  padding: 16px;
+  font-family: "Karla", serif;
+  border: 1px solid #aaaaaa;
+}
+
+.message-input-field-container > textarea:focus,
+.message-input-field-container > textarea:focus-within,
+.message-input-field-container > textarea:focus-visible,
+.message-input-field-container > textarea:hover {
+  border: 1px solid hsl(169, 82%, 27%);
 }
 
 .checkbox-container {
   display: flex;
+  flex-direction: column;
+  margin-block: 24px;
+}
+
+.checkbox {
+  display: flex;
   align-items: center;
 }
 
-.checkbox-container > input {
+.checkbox > input {
   width: auto;
   margin-right: 8px;
 }
@@ -146,4 +188,9 @@ label::after {
   font-size: 16px;
   font-weight: 500;
   font-family: "Karla", serif;
+  cursor: pointer;
+}
+
+.submit-button-container > button:hover {
+  background-color: hsl(169, 77%, 21%);
 }
